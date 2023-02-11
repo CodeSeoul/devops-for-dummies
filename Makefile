@@ -3,7 +3,7 @@ setup:
 	@python -m venv venv
 	@venv/bin/pip install --upgrade pip
 	@venv/bin/pip install -r requirements.txt -r requirements.dev.txt
-	@pre-commit install
+	@. venv/bin/activate && pre-commit install
 
 .PHONE: run
 run:
